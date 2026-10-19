@@ -1,0 +1,13 @@
+library(bekkpub)
+x <- bekk_simulate(800, C = matrix(c(.3,.06,0,.25),2),
+                   A = diag(c(.22,.18)), B = diag(c(.88,.86)), seed = 42)
+colnames(x) <- c("Asset 1", "Asset 2")
+fit <- bekk_fit(x, type = "diagonal", starts = 3)
+print(fit)
+print(bekk_diagnostics(fit))
+dir.create("bekk-results", showWarnings = FALSE)
+bekk_report(fit, "bekk-results/report.html")
+bekk_report(fit, "bekk-results/report.tex", format = "latex")
+write.csv(bekk_table(fit), "bekk-results/coefficients.csv", row.names = FALSE)
+write.csv(bekk_diagnostics(fit), "bekk-results/diagnostics.csv", row.names = FALSE)
+saveRDS(fit, "bekk-results/fit.rds")

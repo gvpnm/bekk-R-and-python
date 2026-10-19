@@ -1,0 +1,13 @@
+Package: bekkpub
+Type: Package
+Title: BEKK Covariance Models and Publication Tables
+Version: 0.1.2
+Authors@R: person("Package", "Maintainer", email = "maintainer@example.org", role = c("aut", "cre"))
+Description: Fits full and diagonal BEKK(1,1) multivariate volatility models
+    by Gaussian quasi-maximum likelihood. Provides sandwich inference,
+    residual diagnostics, simulation, and HTML and LaTeX publication tables.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports: stats
+LazyData: true

@@ -1,0 +1,11 @@
+1. Extract bekkpython.zip into C:\Users\Narayan\Documents\Codex\bekk.
+2. Open Command Prompt in the extracted folder containing the wheel.
+3. Run:
+   py -m pip install .\bekkpub-0.1.0-py3-none-any.whl
+4. Run the example:
+   py .\bekkpython\examples\stock_example.py --output "C:\Users\Narayan\Documents\Codex\bekk"
+5. Open python_stock_report.html in that output folder.
+
+Python 3.10 or newer is required. The first installation needs Internet
+for any missing NumPy, SciPy or pandas dependencies. R does not run these files.
+To view examples inside Python: help(bekkpub.bekk_fit), after import bekkpub.
