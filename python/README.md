@@ -7,7 +7,7 @@ implementation; it is not published on PyPI. Python >=3.10 is required.
 
 ## Windows installation
 
-Extract the delivery ZIP into `C:\Users\Narayan\Documents\Codex\bekk`.
+Extract the delivery ZIP into `your computer
 Open Command Prompt in that folder, then install the included wheel:
 
 ```bat
@@ -25,7 +25,7 @@ installation needs Internet access to obtain any missing dependencies.
 Run Python scripts with `py`, not `pip`:
 
 ```bat
-py .\bekkpython\examples\stock_example.py --output "C:\Users\Narayan\Documents\Codex\bekk"
+py .\bekkpython\examples\stock_example.py 
 ```
 
 ## Basic use
@@ -36,7 +36,7 @@ from bekkpub import (
     load_stock_returns, bekk_fit, bekk_table, bekk_diagnostics, bekk_report,
 )
 
-folder = Path.home() / "Documents" / "Codex" / "bekk"
+folder = Path.home() / "Documents" / "bekk"
 folder.mkdir(parents=True, exist_ok=True)
 returns = load_stock_returns()[["DAX", "FTSE"]].tail(500)
 fit = bekk_fit(returns, type="diagonal", se="robust")
